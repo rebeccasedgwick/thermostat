@@ -88,7 +88,7 @@ describe('Feature tests', function() {
       });
     });
 
-    describe('when temp is above 25', function() {
+    describe('when temp is anything else (above 25)', function() {
       it('is high usage', function() {
         thermostat.switchOffPSM()
         for (var n = 0; n < 6; n++ ) {
@@ -97,8 +97,5 @@ describe('Feature tests', function() {
         expect(thermostat.energyUsage()).toBe('high-usage')
       });
     });
-
-
   });
-
 });
