@@ -27,4 +27,18 @@ describe('Feature tests', function() {
     }
     expect(thermostat.currentTemp()).toBe(10);
   });
+
+  it('has a power saving mode (PSM), which is on by default', function() {
+    expect(thermostat.isPSMOn()).toBe(true);
+  });
+
+  it('can switch power saving mode (PSM) off', function() {
+    thermostat.switchOffPSM();
+    expect(thermostat.isPSMOn()).toEqual(false);
+  });
+
+  it('can switch power saving mode (PSM) on', function() {
+    thermostat.switchOnPSM();
+    expect(thermostat.isPSMOn()).toEqual(true);
+  })
 });
