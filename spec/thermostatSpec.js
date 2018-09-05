@@ -63,4 +63,12 @@ describe('Feature tests', function() {
       expect(thermostat.currentTemp()).toEqual(32);
     });
   });
+
+  it('it can be reset to 20', function() {
+    for (var n = 0; n < 6; n++ ) {
+      thermostat.up();
+    }
+    thermostat.resetTemp()
+    expect(thermostat.currentTemp()).toEqual(20);
+  });
 });
