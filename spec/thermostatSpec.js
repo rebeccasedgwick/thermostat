@@ -12,12 +12,19 @@ describe('Feature tests', function() {
   });
 
   it('can increase the temperature using "increase"', function() {
-    thermostat.up()
+    thermostat.up();
     expect(thermostat.currentTemp()).toBe(21);
   });
 
   it('can decrease the temperature using "decrease"', function() {
-    thermostat.down()
+    thermostat.down();
     expect(thermostat.currentTemp()).toBe(19);
+  });
+
+  it('has min temperature of 10 degrees', function() {
+    for (var n = 0; n < 11; n++) {
+      thermostat.down();
+    }
+    expect(thermostat.currentTemp()).toBe(10);
   });
 });
