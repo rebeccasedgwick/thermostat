@@ -40,5 +40,15 @@ describe('Feature tests', function() {
   it('can switch power saving mode (PSM) on', function() {
     thermostat.switchOnPSM();
     expect(thermostat.isPSMOn()).toEqual(true);
-  })
+  });
+
+  describe('when power saving mode (PSM) is on', function() {
+    it('has a max temp of 25', function() {
+      for (var n = 0; n < 6; n++ ) {
+        thermostat.up();
+      }
+      console.log(thermostat.isMaxTemp())
+      expect(thermostat.currentTemp()).toEqual(25);
+    });
+  });
 });
