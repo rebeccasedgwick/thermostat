@@ -39,7 +39,7 @@ Thermostat.prototype.switchOffPSM = function() {
 };
 
 Thermostat.prototype.switchOnPSM = function() {
-  this.powerSavingMode =true;
+  this.powerSavingMode = true;
 };
 
 Thermostat.prototype.isMaxTemp = function() {
