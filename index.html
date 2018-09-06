@@ -2,18 +2,19 @@
 <html>
   <head>
     <title>Thermostat</title>
+    <script src="jquery-3.3.1.js"></script>
     <script src="src/thermostat.js"></script>
   </head>
   <body>
     <button id="up">Increase</button>
     <button id="down">Decrease</button>
     <button id="reset">Reset</button>
-    <label for="switch">Toggle power saving mode
-      <label class="switch">
-        <input type="checkbox">
+    <label for="toggle">Toggle power saving mode
+      <label class="toggle">
+        <input type="checkbox" id="toggle">
         <span class="slider round"></span>
     </label>
   </label>
-  Temperature: 20
+  <div id="temperature"></div>
   </body>
 </html>
