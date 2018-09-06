@@ -5,15 +5,7 @@
     <script src="jquery-3.3.1.js"></script>
     <script src="src/thermostat.js"></script>
     <script src="thermoController.js"></script>
-
-    <script>
-      function getWeather(){
-          $.get("http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID=a50b2f1bbbdf7b0832f47d1854ef9b45",function(jdata){
-            $("#weather").text(jdata.main.temp);
-          });
-      }
-      </script>
-  </head>
+    <script src="weatherController.js"></script>
 
   <body>
     <button id="up">Increase</button>

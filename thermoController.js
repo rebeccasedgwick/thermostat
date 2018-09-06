@@ -1,5 +1,6 @@
 $(document).ready(function() {
   var thermostat = new Thermostat();
+  getWeather();
   $("#temperature").text(thermostat.temperature)
 
   $("#up").click(function() {
